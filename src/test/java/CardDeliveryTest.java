@@ -13,7 +13,7 @@ import static java.lang.String.format;
 import static java.time.LocalTime.now;
 
 class CardDeliveryTest {
-    String planDate = LocalDate.now().plusDays(2).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
+    String planDate = LocalDate.now().plusDays(4).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
     @Test
     void shouldSendForm() {
 
