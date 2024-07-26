@@ -5,8 +5,7 @@ import java.time.Duration;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-import static com.codeborne.selenide.Condition.exist;
-import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static java.lang.String.format;
@@ -25,7 +24,7 @@ class CardDeliveryTest {
         $("[name='phone']").setValue("+79998887766");
         $(".checkbox__text").click();
         $(".button__content").click();
-        $(".notification_visible").shouldBe(exist, Duration.ofSeconds(15));
+        $(".notification__content").shouldHave(text("Встреча успешно забронирована на " + planDate),Duration.ofSeconds(15)).shouldBe(hidden);
     }
 
 
