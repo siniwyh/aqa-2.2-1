@@ -24,7 +24,7 @@ class CardDeliveryTest {
         $("[name='phone']").setValue("+79998887766");
         $(".checkbox__text").click();
         $(".button__content").click();
-        $(".notification__content").shouldHave(text("Встреча успешно забронирована на " + planDate),Duration.ofSeconds(15)).shouldBe(hidden);
+        $(".notification__content").shouldHave(text("Встреча успешно забронирована на " + planDate),Duration.ofSeconds(15)).shouldBe(visible);
     }
 
 
